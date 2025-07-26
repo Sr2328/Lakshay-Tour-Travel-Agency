@@ -7,7 +7,8 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
-
+import Pricing from './pages/Pricing';
+import FleetGallery from './pages/FleetGallery'; // Ensure this path is correct
 function App() {
   return (
     <Router>
@@ -19,6 +20,8 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+             <Route path="/pricing" element={<Pricing />} />
+             <Route path="/FleetGallery" element={<FleetGallery />} />
           </Routes>
         </main>
         <Footer />

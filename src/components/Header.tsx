@@ -23,8 +23,11 @@ const Header = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
+    { name: 'Pricing', path: '/pricing' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Gallery', path: '/FleetGallery' },
+    { name: 'Card', path: '/Card' },
   ];
 
   return (
@@ -35,9 +38,13 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-2 rounded-xl shadow-lg">
-              <Car className="h-8 w-8 text-white" />
-            </div>
+            <div className=" p-2 rounded-xl shadow-lg">
+    <img
+      src="./assests\LOGO-TARVE'.jpg" // Update this path to your actual logo file location
+      alt="Lakshay Tour & Travel Logo"
+      className="h-8 w-8 object-contain"
+    />
+  </div>
             <span className="text-2xl font-black text-gray-900 tracking-tight">
               Lakshay Tour & Travel
             </span>

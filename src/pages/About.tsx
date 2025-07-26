@@ -1,14 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Bus, MapPin, Award, Shield, Clock, Navigation, Headphones, DollarSign, Settings, Building2, Factory, Heart, GraduationCap, CaseSensitive as University, ShoppingCart } from 'lucide-react';
+import CountUp from 'react-countup';
+import {
+  Users,
+  Bus,
+  MapPin,
+  Award,
+  Shield,
+  Clock,
+  Navigation,
+  Headphones,
+  DollarSign,
+  Settings,
+  Building2,
+  Factory,
+  Heart,
+  GraduationCap,
+  CaseSensitive as University,
+  ShoppingCart
+} from 'lucide-react';
+
 
 const About = () => {
   const stats = [
-    { icon: Users, number: '500+', label: 'Happy Clients' },
-    { icon: Bus, number: '50+', label: 'Fleet Vehicles' },
-    { icon: MapPin, number: '20+', label: 'States Covered' },
-    { icon: Award, number: '10+', label: 'Years Experience' }
+    { icon: Users, number: 500, label: 'Happy Clients' },
+    { icon: Bus, number: 50, label: 'Fleet Vehicles' },
+    { icon: MapPin, number: 20, label: 'States Covered' },
+    { icon: Award, number: 10, label: 'Years Experience' }
   ];
+
+  const [startCount, setStartCount] = useState(false);
+
+  useEffect(() => {
+    setStartCount(true);
+  }, []);
 
   const features = [
     {
@@ -54,21 +79,23 @@ const About = () => {
 
   const gallery = [
     {
-      image: 'https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg',
-      title: 'Luxury Coaches'
+      image: 'https://i.postimg.cc/6QyGhVTm/526-5267080-volvo-bus-png-transparent-png-removebg-preview.png',
+      title: 'Volvo Tourist Bus'
     },
     {
-      image: 'https://images.pexels.com/photos/3593922/pexels-photo-3593922.jpeg',
-      title: 'Premium Buses'
+      image: 'https://i.postimg.cc/jS9jtpdM/force-traveller-26-seater-1000x1000-removebg-preview.png',
+      title: 'Force Traveller (Mini Bus)'
     },
     {
-      image: 'https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg',
-      title: 'SUVs & MPVs'
+      image: 'https://i.postimg.cc/hvFjb0h5/new-dzire-colour-pearl-arctic-white-removebg-preview.png',
+      title: 'Maruti Swift Dzire'
     },
+   
     {
-      image: 'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg',
-      title: 'Sedans'
-    }
+      image: 'https://i.postimg.cc/nh97Vjdg/20190322051351-Maruti-Ertiga-Sport-white-removebg-preview.png',
+      title: 'Maruti Suzuki Ertiga'
+    },
+  
   ];
 
   return (
@@ -99,7 +126,6 @@ const About = () => {
                   Building trust through exceptional service
                 </p>
               </div>
-              
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
                   Founded with a vision to revolutionize the transport industry, Lakshay Tour & Travel has been serving businesses and individuals across India with unmatched dedication and professionalism. What started as a small fleet operation has grown into a trusted name in the transport sector.
@@ -116,7 +142,7 @@ const About = () => {
             <div className="lg:w-1/2">
               <div className="relative rounded-xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/3593922/pexels-photo-3593922.jpeg"
+                  src="https://i.postimg.cc/FHBb02gF/Whats-App-Image-2025-07-22-at-19-34-29-ceba6329.jpg"
                   alt="Our Story"
                   className="w-full h-96 object-cover"
                 />
@@ -127,27 +153,26 @@ const About = () => {
         </div>
       </section>
 
-      {/* Experience Stats */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="h-8 w-8 text-blue-600" />
-                </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 font-medium">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+      {/* Stats */}
+     <section className="py-16 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      {stats.map((stat, index) => (
+        <div key={index} className="text-center">
+          <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <stat.icon className="h-8 w-8 text-blue-600" />
+          </div>
+          <div className="text-3xl font-bold text-gray-900 mb-2">
+            <CountUp end={stat.number} duration={2} />+
+          </div>
+          <div className="text-gray-600 font-medium">
+            {stat.label}
           </div>
         </div>
-      </section>
-
+      ))}
+    </div>
+  </div>
+</section>
       {/* Why Choose Us */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,7 +184,6 @@ const About = () => {
               What makes us the preferred choice for transport services
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -181,7 +205,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Client Logos */}
+      {/* Clients */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -192,7 +216,6 @@ const About = () => {
               Serving diverse industries across India
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {clients.map((client, index) => (
               <div
@@ -220,7 +243,6 @@ const About = () => {
               Modern and well-maintained vehicles for every need
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {gallery.map((item, index) => (
               <div

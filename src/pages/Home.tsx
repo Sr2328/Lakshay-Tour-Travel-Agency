@@ -40,27 +40,32 @@ const Home = () => {
     {
       name: 'Force Traveller',
       description: '12-17 seater for group travel',
-      image: 'https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg'
+      image: 'https://i.postimg.cc/XYbJF7NS/force-traveller-26.jpg'
     },
     {
       name: 'Volvo Bus',
       description: 'Luxury coach for long distance',
-      image: 'https://images.pexels.com/photos/3593922/pexels-photo-3593922.jpeg'
+      image: 'https://i.postimg.cc/nrXZ8NH1/white-color-volvo-bus-ai-image-856405-1061.avif'
     },
     {
       name: 'Dzire',
       description: 'Compact sedan for city rides',
-      image: 'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg'
+      image: 'https://i.postimg.cc/J4b71VNT/front-left-side-47.avif'
     },
     {
       name: 'Ertiga',
       description: '7-seater for family travel',
-      image: 'https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg'
+      image: 'https://i.postimg.cc/8kvNHQ01/ertigas.webp'
     },
     {
       name: 'Innova',
       description: 'Premium MPV for comfort',
-      image: 'https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg'
+      image: 'https://i.postimg.cc/d00JmhzX/desktop-wallpaper-toyota-innova-crysta.jpg'
+    },
+    {
+      name: 'Traveller Mono Bus',
+      description: ' Spacious, Reliable, Stylish Transport -32 Seater',
+      image: 'https://i.postimg.cc/856QtMwy/force-traveller-mono-bus-1000x1000.webp'
     }
   ];
 
@@ -99,7 +104,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg)'
+            backgroundImage: 'url(https://i.postimg.cc/SNGVFRvD/Chat-GPT-Image-Jul-24-2025-11-30-49-AM.png)'
           }}
         />
         <div className="absolute inset-0 bg-black bg-opacity-50" />
@@ -187,7 +192,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {fleet.map((vehicle, index) => (
               <div
                 key={index}
@@ -318,14 +323,14 @@ const Home = () => {
               className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg flex items-center justify-center group"
             >
               <MessageCircle className="mr-3 h-6 w-6 group-hover:animate-pulse-slow" />
-              💬 WhatsApp Now
+               WhatsApp Now
             </a>
             <a
               href="tel:+919876543210"
               className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg flex items-center justify-center group"
             >
               <Phone className="mr-3 h-6 w-6 group-hover:animate-pulse-slow" />
-              📞 Call Now
+              Call Now
             </a>
           </div>
           

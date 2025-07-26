@@ -16,7 +16,7 @@ const Services = () => {
       icon: Building2,
       title: 'Staff Pickup & Drop',
       description: 'Reliable daily transportation services for your employees with scheduled pickup and drop-off routes. Our professional drivers ensure punctual and safe commuting for your workforce.',
-      image: 'https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'https://i.postimg.cc/xdV4nhPP/Car-image.jpg',
       features: [
         'Scheduled daily routes',
         'GPS tracking available',
@@ -28,7 +28,7 @@ const Services = () => {
       icon: Bus,
       title: 'Corporate Bus Rentals',
       description: 'Premium fleet rentals for corporate events, conferences, team outings, and business meetings. Choose from our range of comfortable and well-maintained vehicles.',
-      image: 'https://images.pexels.com/photos/3593922/pexels-photo-3593922.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'https://i.postimg.cc/MKkPygCJ/b2b-mobile-banner-new.webp',
       features: [
         'Luxury coaches available',
         'AC and non-AC options',
@@ -40,7 +40,7 @@ const Services = () => {
       icon: MapPin,
       title: 'Long-distance State Tours',
       description: 'Interstate business and leisure travel bookings to any destination across India. Comfortable long-distance journeys with experienced drivers and well-planned routes.',
-      image: 'https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'https://i.postimg.cc/hGqc6Czk/Toyota-Innova-Crysta-Front-Three-Quarter-7.jpg',
       features: [
         'All-India coverage',
         'Route planning assistance',
@@ -52,7 +52,7 @@ const Services = () => {
       icon: Calendar,
       title: 'Event Transfers / Airport Transfers',
       description: 'Specialized transportation for weddings, conferences, airport pickups, and special events. Punctual and professional service to make your occasions memorable.',
-      image: 'https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'https://i.postimg.cc/5yRThPWx/airport-pickup.jpg',
       features: [
         'Wedding transportation',
         'Airport pickup/drop',
@@ -64,7 +64,7 @@ const Services = () => {
       icon: Car,
       title: 'Private Car Rentals',
       description: 'Personal vehicle rentals for individual and family travel needs. Choose from sedans, SUVs, and luxury cars for city rides, outstation trips, and personal use.',
-      image: 'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'https://i.postimg.cc/DysKVT0H/rental-cars.jpg',
       features: [
         'Hourly and daily rentals',
         'Self-drive options',
@@ -87,7 +87,7 @@ const Services = () => {
           <div className="animate-fade-in-up">
             <span className="text-blue-200 font-semibold text-lg tracking-wider uppercase">Professional Transport</span>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight text-shadow-xl">
-              Our Transport <span className="text-gradient bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Services</span>
+              Our Transport Services
           </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed font-medium animate-fade-in-up animate-delay-200">
               Comprehensive solutions for all your travel needs with premium comfort and reliability
@@ -190,7 +190,7 @@ const Services = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6 text-shadow-lg">
-              Ready to Book Your Next <span className="text-gradient bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Journey?</span>
+              Ready to Book Your Next Journey?
           </h2>
             <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
               Contact us today for personalized transport solutions tailored to your needs
