@@ -1,11 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Lakshay-Tour-Travel-Agency/', // 👈 this is the repo name
+  base: '/Lakshay-Tour-Travel-Agency/', // 👈 GitHub Pages base path
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: './index.html', // 👈 Ensure fallback support for GitHub Pages refresh
+      },
+    },
   },
 });
