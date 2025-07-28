@@ -1,17 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+const isGitHubPages = process.env.VITE_GITHUB_PAGES === 'true';
+
 export default defineConfig({
-  base: '/Lakshay-Tour-Travel-Agency/', // 👈 GitHub Pages base path
+  base: isGitHubPages ? '/Lakshay-Tour-Travel-Agency/' : '/',
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
-  },
-  build: {
-    rollupOptions: {
-      input: {
-        main: './index.html', // 👈 Ensure fallback support for GitHub Pages refresh
-      },
-    },
   },
 });
