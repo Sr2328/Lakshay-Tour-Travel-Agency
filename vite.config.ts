@@ -1,12 +1,16 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
-const isGitHubPages = process.env.VITE_GITHUB_PAGES === 'true';
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
 
-export default defineConfig({
-  base: isGitHubPages ? '/Lakshay-Tour-Travel-Agency/' : '/',
-  plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
+  const isGitHubPages = env.VITE_GITHUB_PAGES === 'true';
+
+  return {
+    base: isGitHubPages ? '/Lakshay-Tour-Travel-Agency/' : '/',
+    plugins: [react()],
+    optimizeDeps: {
+      exclude: ['lucide-react'],
+    },
+  };
 });
